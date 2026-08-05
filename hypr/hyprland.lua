@@ -27,7 +27,7 @@ hl.monitor({output = "HDMI-A-1", mode = "preferred" , position = "auto-left", sc
 
 --  DEBUGGING FOR SYMLINK CHANGING
 --  IWHAFUOIBFWNOIUBWRFIUGFB
---
+--  WEAWDFAF
 
 ---------------------
 ---- MY PROGRAMS ----
