@@ -11,7 +11,9 @@
 ------------------------
 ---- MODULE RUNTIME ----
 ------------------------
-require("monitors.lua")
+package.path = package.path .. ";./?.lua;./?/init.lua"
+require("modules.monitors")
+
 
 
 ---------------------
@@ -47,12 +49,6 @@ hl.exec_cmd("steam")
 
 
 end)
-
-
--- To be added, other dumb fucking apps that I don't understand! 8/5/26
-
-
-
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
