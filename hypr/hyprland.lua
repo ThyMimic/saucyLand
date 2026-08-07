@@ -20,7 +20,9 @@ require("modules.monitors")
 ---------------------
 
 -- Set programs that you use
-local terminal = "alacritty"
+local terminal          = "alacritty"
+local wallpaper_manager = "hyprpaper"
+local web_browser       = "firefox"
 
 
 
@@ -43,7 +45,8 @@ hl.exec_cmd("waybar")
 hl.exec_cmd(terminal)
 hl.exec_cmd("firefox")
 hl.exec_cmd("spotify")
-hl.exec_cmd("steam")
+hl.exec_cmd(wallpaper_manager)
+
 
 
 
@@ -91,7 +94,7 @@ hl.config({
         border_size = 2,
 
         col = {
-            active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
+            active_border   = { colors = {"rgba(217,0,0,1)", "rgba(152,4,4,1)"}, angle = 45 },
             inactive_border = "rgba(595959aa)",
         },
 
