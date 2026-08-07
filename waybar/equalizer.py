@@ -12,6 +12,19 @@ related
    waybar       
       equalizer.py  <-^ (averages data to send back to waybar)
          cava > > >---| (sends data back to the script)
+         
+         
+         For future reference: 
+         - subprocess.Popen is process open, the line that actually opens the command
+         - ["cava"] is the command that's opening, basically like typing "cava" in terminal
+         - stdout is the output cava is sending here instead of sending to the terminal, it makes the pipe
+            - In other words, you change the path the data flows to from cava to terminal to cava to script
+         - text = true tells python not to interpret the piped data as bytes and lets you change it
+         - buffering lets python get a line from cava one at a time
+            - So instead of playing a song and finishing and python not getting the data until it's done
+              cava sends it one at a time, important for the equalizer very much so
+         
+    
 """
 cava = subprocess.Popen(
     ["cava"],
@@ -20,6 +33,7 @@ cava = subprocess.Popen(
     bufsize = 1
 )
 
+# Note that strip just removes outside stuff, split removes inside afterwords
 
 #This is basically saying for every line of output cava sends, do allat
 for line in cava.stdout:
@@ -29,7 +43,7 @@ for line in cava.stdout:
     if len(values) != 8:
         continue
 
-    #This forms the array of integers from the split string made earlier
+    #This forms the array of integers from the split string array made earlier
     values = [int(value) for value in values]
 
     #THIS forms the array of averaged values, moving from an 8 element array to a 4 element array
@@ -40,5 +54,11 @@ for line in cava.stdout:
         (values[6] + values[7]) / 2,
     ]
 
-    #Epic print
-    print(four_bands)
+    bars = "▁▂▃▄▅▆▇█"
+
+    visualizer = "".join(
+        bars[min(int(value/100 * len(bars)), len(bars) - 1)]
+        for value in four_bands
+    )
+
+    print(visualizer)
