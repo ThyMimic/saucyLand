@@ -62,4 +62,4 @@ for line in cava.stdout:
     )
 
     #Flush just prevents python from accidentally chunking data together
-    print(visualizer, flush=true)
+    print(visualizer, flush=True)

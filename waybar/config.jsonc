@@ -19,6 +19,7 @@
         "mpd",
         "idle_inhibitor",
         "pulseaudio",
+        "custom/equalizer",     //Custom Addition #1
         "network",
         "power-profiles-daemon",
         "cpu",
