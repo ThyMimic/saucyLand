@@ -15,7 +15,6 @@ package.path = package.path .. ";./?.lua;./?/init.lua"
 require("modules.monitors")
 
 
-
 ---------------------
 ---- MY PROGRAMS ----
 ---------------------
