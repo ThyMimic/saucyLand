@@ -8,18 +8,18 @@
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
-        "custom/equalizer",     //Custom Addition #1
         "hyprland/submap",
-        "custom/media"
+        "custom/media",
+        "custom_equalizer",
+        "pulseaudio",
+        "hyprland/window"
     ],
     "modules-center": [
-        "hyprland/window"
+        "clock"
     ],
     "modules-right": [
         "mpd",
         "idle_inhibitor",
-        "pulseaudio",
-        "custom/equalizer",     //Custom Addition #1
         "network",
         "power-profiles-daemon",
         "cpu",
@@ -30,7 +30,6 @@
         "sway/language",
         "battery",
         "battery#bat2",
-        "clock",
         "tray",
         "custom/power"
     ],
