@@ -64,7 +64,7 @@
 
     "custom/equalizer": {
         "exec": "python3 /home/jacksonc/Projects/dotfiles/waybar/equalizer.py",
-        "format": "󰕾 {text}",
+        "format": "{text}",
         "tooltip": false
     },
 
