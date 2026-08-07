@@ -10,8 +10,8 @@
         "hyprland/workspaces",
         "hyprland/submap",
         "custom/media",
-        "custom_equalizer",
         "pulseaudio",
+	"custom/equalizer",
         "hyprland/window"
     ],
     "modules-center": [
