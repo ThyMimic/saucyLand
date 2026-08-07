@@ -53,12 +53,20 @@ for line in cava.stdout:
         (values[4] + values[5]) / 2,
         (values[6] + values[7]) / 2,
     ]
+    smoothed_bands =[]
+    previous_bands = [0.0, 0.0, 0.0, 0.0]
+    for old, new in zip(previous_bands, four_bands):
+        if new > old:
+            smoothed = old * 0.3 + new * 0.7
+        else:
+            smoothed = old * 0.8 + new * 0.2
+        smoothed_bands.append(smoothed)
+
 
     bars = "▁▂▃▄▅▆▇█"
-
-    visualizer = "".join(
+    visualizer = " ".join(
         bars[min(int(value/100 * len(bars)), len(bars) - 1)]
-        for value in four_bands
+        for value in smoothed_bands
     )
 
     #Flush just prevents python from accidentally chunking data together
