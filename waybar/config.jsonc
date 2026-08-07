@@ -8,6 +8,7 @@
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
+        "custom/equalizer",     //Custom Addition #1
         "hyprland/submap",
         "custom/media"
     ],
@@ -49,6 +50,28 @@
     //         "default": ""
     //     }
     // },
+
+
+
+
+    /*
+    Custom Module Configuration
+    =====
+    The following modules were handmade and are custom. Most debugging is going to take place here.
+        - Equalizer
+    */
+
+    "custom/equalizer": {
+        "exec": "python3 /home/jacksonc/Projects/dotfiles/waybar/equalizer.py",
+        "format": "󰕾 {text}",
+        "tooltip": false
+    },
+
+
+
+
+
+
     "keyboard-state": {
         "numlock": true,
         "capslock": true,

@@ -61,4 +61,5 @@ for line in cava.stdout:
         for value in four_bands
     )
 
-    print(visualizer)
+    #Flush just prevents python from accidentally chunking data together
+    print(visualizer, flush=true)
