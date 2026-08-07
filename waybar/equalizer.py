@@ -48,10 +48,10 @@ for line in cava.stdout:
 
     #THIS forms the array of averaged values, moving from an 8 element array to a 4 element array
     four_bands = [
-        max(values[0] + values[1]),
-        max(values[2] + values[3]),
-        max(values[4] + values[5]),
-        max(values[6] + values[7])
+        max(values[0], values[1]),
+        max(values[2], values[3]),
+        max(values[4], values[5]),
+        max(values[6], values[7])
     ]
     smoothed_bands =[]
     previous_bands = [0.0, 0.0, 0.0, 0.0]
